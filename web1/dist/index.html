@@ -191,6 +191,7 @@
     <div id="showBox" class="box-alert">
         <div class="box-alert-bg"></div>
         <div class="box-alert-text">
+            <span id="closeBtn" style="position:absolute;top:5px;right:10px;display: block; width: 30px; height: 30px;font-size:20px;text-align: center; line-height: 30px;">X</span>
             <h3>【寻梦忠告】</h3>
             <p style="font-size: 1.3rem">您真想失去一次与源头厂家交流机会吗？</p>
             <p style="font-size: 1.5rem;font-weight: bold;">据统计，93%的客户因没有找到源头厂家，而买到价格偏高的翡翠！</p>
@@ -217,11 +218,14 @@
                 history.replaceState(null, document.title, location.pathname);
 
                 setTimeout(function () {
-                    document.getElementById('showBox').style.display = 'block';
+                    document.getElementById("showBox").style.display = "block";
                 }, 0);
             }
         }, false);
     }(window, location));
+    document.getElementById("closeBtn").onclick=function(){
+        document.getElementById("showBox").style.display = "none";
+    }
 </script>
 
 </html>
