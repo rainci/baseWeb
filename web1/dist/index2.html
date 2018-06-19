@@ -219,13 +219,16 @@
 
                 setTimeout(function () {
                     document.getElementById("showBox").style.display = "block";
+                    document.getElementById("closeBtn").addEventListener('click',function(){
+                        document.getElementById("showBox").style.display = "none";
+                    });
                 }, 0);
             }
         }, false);
     }(window, location));
-    document.getElementById("closeBtn").onclick=function(){
-        document.getElementById("showBox").style.display = "none";
-    }
+    // document.getElementById("closeBtn").onclick=function(){
+    //     document.getElementById("showBox").style.display = "none";
+    // }
 </script>
 
 </html>
